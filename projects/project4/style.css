@@ -1,0 +1,149 @@
+
+body {
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+#wrapper {
+    width: 100%;
+    max-width: 1024px;
+    position: relative;
+    margin: 50px  auto;
+  }
+  .gif{
+    background-image: url(/img/icon.gif);
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    height: 80px;
+  }
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev, #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: rgb(145, 70, 255);
+    border: none;
+    padding: 14px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  #next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+    
+  button .arrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 6px;
+    transition: transform 0.3s ease-out;
+    outline: none;
+  }
+    
+    #prev .arrow {
+      position: relative;
+      left: 3px;
+      transform: rotate(135deg);
+  }
+    
+   #next .arrow {
+     position: relative;
+     right: 3px;
+     transform: rotate(-45deg);
+  } 
+    
+  #content {
+      width: 100%;	
+      min-height: auto;		
+      display: flex;
+      flex-wrap: nowrap;
+  }
+  
+  img {
+      width: 100%;
+      height: auto;
+  }
+  
+  div.slide {
+      min-width: 100%;	
+      height: auto;	
+   }
+   
+  div.slide:not(:last-child) {
+      margin-right: 12px;
+  }
+
+  .holder {
+    margin: auto;
+    max-width: 300px;
+    padding: 0 12px;
+  }
+  .holder h1 {
+    color: #333333;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 12px;
+  }
+  .holder h1 span {
+    display: block;
+    color: #333333;
+    font-weight: 700;
+    font-size: 2.3rem;
+  }
+  .holder p {
+    font-size: 0.8em;
+    color: #333333;
+    text-align: center;
+    border-top: 1px solid #f0f0ff;
+    border-bottom: 1px solid #f0f0ff;
+    padding: 8px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+  }
+  
+  @media only screen and (min-width: 400px) {
+    .holder h1 {
+      font-size: 2em;
+    }
+    .holder p {
+      font-size: 1em;
+    }
+  }
+  
+  
+  @media all and (min-width: 448px) {
+      div.slide {
+      min-width: 50%;			
+   }
+  }
+  
+  @media all and (min-width: 778px) {
+      div.slide {
+      min-width: 33%;			
+   }
+  }
